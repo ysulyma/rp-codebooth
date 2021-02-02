@@ -12,10 +12,6 @@ export default function Output() {
 
   /* refs */
   const ref = useRef<HTMLPreElement>();
-  const nRef = useRef<HTMLDivElement>();
-  const wRef = useRef<HTMLDivElement>();
-
-  const dragDir = useRef(null);
 
   /* event handlers */
   const resizeEvents = useMemo(() => dragHelperReact((e, {x}) => {

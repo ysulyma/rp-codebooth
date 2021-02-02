@@ -1,13 +1,14 @@
 {
   "name": "rp-codebooth",
   "version": "1.0.0",
-  "description": "CodeMirror recorder and replayer for ractive-player/rp-recording",
+  "description": "ractive-player widget for interactive coding demos",
   "exports": {
     ".": "./rp-codebooth.js"
   },
   "files": [
     "rp-codebooth.js",
-    "rp-codebooth.d.ts"
+    "rp-codebooth.d.ts",
+    "style.css"
   ],
   "main": "rp-codebooth.js",
   "typings": "rp-codebooth.d.ts",

@@ -1,11 +1,8 @@
 import * as React from "react";
 import {useCallback, useEffect, useMemo, useRef} from "react";
 
-import {Player, Utils, usePlayer} from "ractive-player";
-const {during} = Utils.authoring,
-      {dragHelperReact} = Utils.interactivity,
-      {constrain} = Utils.misc,
-      {onClick} = Utils.mobile;
+import {Player, Utils} from "ractive-player";
+const {onClick} = Utils.mobile;
 import type {Recorder} from "rp-recording";
 
 import {CodeEditor, CodeReplay} from "rp-codemirror";
@@ -40,6 +37,7 @@ export function CodeBooth(props: Props) {
 
   // recording
   if (recorder) {
+    // this doesn't break the rules of hooks since you never change whether a recorder was passed
     useEffect(() => {
       codeEditor.current.ready.then(() => {
         recorder.connect(codeEditor.current);
@@ -52,7 +50,7 @@ export function CodeBooth(props: Props) {
   const tabToggle = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const pane = e.currentTarget.classList.contains("button-replay") ? "replay" : "playground";
 
-    useStore.setState({pane})
+    useStore.setState({pane});
   }, []);
 
   // copy
@@ -81,7 +79,7 @@ export function CodeBooth(props: Props) {
             messages = [{
               classNames: ["replay", "error"],
               text: e + "\n"
-            }]
+            }];
           }
         }
 
@@ -117,7 +115,7 @@ export function CodeBooth(props: Props) {
         messages = [{
           classNames: ["user", "error"],
           text: e + "\n"
-        }]
+        }];
       }
     }
     useStore.setState(prev => ({messages: prev.messages.concat(messages)}));
@@ -155,23 +153,23 @@ export function CodeBooth(props: Props) {
         ref={codeEditor}
         theme={theme}
       /> : <>
-      <CodeReplay
-        className="code-replay"
-        command={replayCommand}
-        keyMap={keyMap}
-        mode={mode}
-        ref={codeReplay}
-        replay={replay}
-        start="codemirror/"
-        theme={theme}
-      />
-      <CodeEditor
-        className="code-playground"
-        keyMap={keyMap}
-        mode={mode}
-        ref={codeEditor}
-        theme={theme}
-      /></>}
+        <CodeReplay
+          className="code-replay"
+          command={replayCommand}
+          keyMap={keyMap}
+          mode={mode}
+          ref={codeReplay}
+          replay={replay}
+          start="codemirror/"
+          theme={theme}
+        />
+        <CodeEditor
+          className="code-playground"
+          keyMap={keyMap}
+          mode={mode}
+          ref={codeEditor}
+          theme={theme}
+        /></>}
       <div onMouseUp={Player.preventCanvasClick}>
         <button className="button-replay" {...toggleEvents}>Code</button>
         <button className="button-playground" {...toggleEvents}>Playground</button>
