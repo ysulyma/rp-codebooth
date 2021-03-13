@@ -160,7 +160,7 @@ export function CodeBooth(props: Props) {
           mode={mode}
           ref={codeReplay}
           replay={replay}
-          start="codemirror/"
+          start={props.start}
           theme={theme}
         />
         <CodeEditor

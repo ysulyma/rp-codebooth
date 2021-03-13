@@ -1,6 +1,6 @@
 {
   "name": "rp-codebooth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ractive-player widget for interactive coding demos",
   "exports": {
     ".": "./rp-codebooth.js"
@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/ysulyma/rp-codebooth#readme",
   "peerDependencies": {
-    "rp-codemirror": "^1.0.0",
     "@types/codemirror": "^0.0.106",
     "@types/react": "^17.0.0",
-    "rp-recording": "^2.0.0",
-    "ractive-player": "^2.0.3"
+    "ractive-player": "^2.0.3",
+    "rp-codemirror": "^1.0.0",
+    "rp-recording": "^2.0.0"
   },
   "devDependencies": {
     "@babel/runtime": "^7.12.5",
