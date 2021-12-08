@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useCallback, useEffect, useMemo, useRef} from "react";
 
-import {Player, Utils} from "ractive-player";
+import {Player, Utils} from "liqvid";
 const {onClick} = Utils.mobile;
 import type {Recorder} from "rp-recording";
 

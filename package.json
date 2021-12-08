@@ -1,7 +1,7 @@
 {
   "name": "rp-codebooth",
-  "version": "1.0.1",
-  "description": "ractive-player widget for interactive coding demos",
+  "version": "1.2.0",
+  "description": "Liqvid widget for interactive coding demos",
   "exports": {
     ".": "./rp-codebooth.js"
   },
@@ -30,9 +30,8 @@
   "peerDependencies": {
     "@types/codemirror": "^0.0.106",
     "@types/react": "^17.0.0",
-    "ractive-player": "^2.0.3",
     "rp-codemirror": "^1.0.0",
-    "rp-recording": "^2.0.0"
+    "rp-recording": "^2.1.1"
   },
   "devDependencies": {
     "@babel/runtime": "^7.12.5",
@@ -51,9 +50,9 @@
     "webpack-cli": "^4.4.0"
   },
   "dependencies": {
-    "ractive-player": "^2.0.3",
+    "liqvid": "^2.0.10",
     "rp-codemirror": "^1.0.0",
-    "rp-recording": "^2.0.0",
+    "rp-recording": "^2.1.1",
     "zustand": "^3.3.1"
   }
 }

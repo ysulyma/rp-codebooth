@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useMemo, useRef} from "react";
 
-import {Player, Utils} from "ractive-player";
+import {Player, Utils} from "liqvid";
 const {dragHelperReact} = Utils.interactivity,
       {constrain} = Utils.misc;
 
