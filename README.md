@@ -1,6 +1,6 @@
 # rp-codebooth
 
-A [ractive-player](https://ractive-player.org) plugin providing a replay/playground/output interface for interactive coding demos. This is built on top of [rp-codemirror](https://www.npmjs.com/package/rp-codemirror), and you should use that package directly if you need more customization.
+A [Liqvid](https://liqvidjs.org) plugin providing a replay/playground/output interface for interactive coding demos. This is built on top of [rp-codemirror](https://www.npmjs.com/package/rp-codemirror), and you should use that package directly if you need more customization.
 
 ## Installation
 
@@ -11,7 +11,7 @@ A [ractive-player](https://ractive-player.org) plugin providing a replay/playgro
 To record:
 
 ```tsx
-import {Player, Script} from "ractive-player";
+import {Player, Script} from "liqvid";
 
 import {CodeBooth} from "rp-codebooth";
 import CodeRecorderPlugin from "rp-codemirror/recorder";
